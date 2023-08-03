@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Lottie from "react-lottie";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./App.css";
+
+const animationData = require("./cat.json");
+
+const App = () => {
+    const options = {
+        loop: false,
+        autoplay: true,
+        animationData: animationData,
+    };
+
+    return (
+        <div className="App">
+            <Lottie options={options} height={400} width={400} />
+        </div>
+    );
+};
 
 export default App;
